@@ -1,7 +1,7 @@
 const { Selector} = require ('testcafe');
 
 function select(select){
-    return Selector(selector).with({boundTestRun:testController})
+    return Selector(select).with({boundTestRun:testController})
 }
 
 exports.RegisterPage = {

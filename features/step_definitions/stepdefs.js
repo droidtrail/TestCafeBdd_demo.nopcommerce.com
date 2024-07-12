@@ -4,54 +4,54 @@ const registerpage = require('../../pages/RegisterPage')
 
 const URL = 'https://demo.nopcommerce.com/register';
 
-Given('I open the registration page', function () {
+Given('I open the registration page', async function () {
     await testController.navigateTo(URL);
 });
 
-When('I select the gender', function () {
+When('I select the gender', async function () {
     await testController
     .click(registerpage.RegisterPage.GenderButton())
 });
 
-When('I enter First Name {string}', function (firstname) {
+When('I enter First Name {string}', async function (firstname) {
     await testController.typeText(registerpage.RegisterPage.Firstname(),firstname)
 });
 
-When('I enter Last Name {string}', function (lastname) {
+When('I enter Last Name {string}', async function (lastname) {
     await testController.typeText(registerpage.RegisterPage.Lastname(),lastname)
 });
 
-When('I select Date of Birth {string}', function (day) {
+When('I select Date of Birth {string}', async function (day) {
     await testController.click(registerpage.RegisterPage.DateOfBirth())
     await testController.click(registerpage.RegisterPage.ListOption().withText(day))
 });
 
-When('I select Month of Birth {string}', function (month) {
+When('I select Month of Birth {string}', async function (month) {
     await testController.click(registerpage.RegisterPage.DateOfMonth())
     await testController.click(registerpage.RegisterPage.ListOption().withText(month))
 });
 
-When('I select Year of Birth {string}', function (year) {
+When('I select Year of Birth {string}', async function (year) {
     await testController.click(registerpage.RegisterPage.DateOfYear())
     await testController.click(registerpage.RegisterPage.ListOption().withText(year))
 });
 
-When('I enter Email {string}', function (email) {
+When('I enter Email {string}', async function (email) {
     await testController.typeText(registerpage.RegisterPage.Email(),email)
 });
 
-When('I enter Password of Birth {string}', function (password) {
+When('I enter Password of Birth {string}', async function (password) {
     await testController.typeText(registerpage.RegisterPage.Password(),password)
 });
 
-When('I enter Confirm Password {string}', function (password) {
+When('I enter Confirm Password {string}', async function (password) {
     await testController.typeText(registerpage.RegisterPage.ConfirmPassword(),password)
 });
 
-When('I click register button', function () {
+When('I click register button', async function () {
     await testController.click(registerpage.RegisterPage.RegistrationButton())
 });
 
-Then('successfull message is displayed', function () {
+Then('successfull message is displayed', async function () {
     await testController.expect(registerpage.RegisterPage.SuccessfulMessage().exists).ok
 });

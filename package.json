@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "base64-img": "^1.0.4",
     "testcafe": "^3.6.2"
   }
 }
