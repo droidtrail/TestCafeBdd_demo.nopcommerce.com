@@ -1,2 +1,5 @@
 node_modules
 package-lock.json
+reports/report.json
+reports/cucumber_report.html
+report-generator.js
