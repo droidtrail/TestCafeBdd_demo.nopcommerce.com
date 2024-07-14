@@ -3,6 +3,7 @@ const { Given, When, Then } = require('@cucumber/cucumber');
 const registerpage = require('../../pages/RegisterPage')
 
 const URL = 'https://demo.nopcommerce.com/register';
+var randomNumber = Math.floor(Math.random()*10000)
 
 Given('I open the registration page', async function () {
     await testController.navigateTo(URL);
@@ -37,7 +38,7 @@ When('I select Year of Birth {string}', async function (year) {
 });
 
 When('I enter Email {string}', async function (email) {
-    await testController.typeText(registerpage.RegisterPage.Email(),email)
+    await testController.typeText(registerpage.RegisterPage.Email(),email+randomNumber+"@test.com")
 });
 
 When('I enter Password of Birth {string}', async function (password) {

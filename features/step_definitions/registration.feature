@@ -18,4 +18,3 @@ Then successfull message is displayed
 Examples:
     | firstname | lastname | day      | month     | year     | email                |password|
     | moataz    | nabil    | 5        | November  | 2000     | test@test.com        |123456  |
-    | james     | bond     | 2        | July      | 1998     | james_bond@test.com  |123456  |
